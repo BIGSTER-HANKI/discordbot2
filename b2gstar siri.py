@@ -1,6 +1,7 @@
 import discord
 import openpyxl
 import random
+import os
 
 client = discord.Client()
 
@@ -62,6 +63,6 @@ async def on_message(message):
     if message.content.startswith("!bs sex"):
         await message.channel.send("어허 너 밴")
 
-
-client.run("NTU0MjA4NTEyMzA2MDUzMTIw.XITA5g.f20RIiYfaoQJ6C86UZg0ej4vkgc")
+access_token = os.environ["BOT_TOKEN]
+client.run(access_token)
 
